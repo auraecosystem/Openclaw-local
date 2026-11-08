@@ -1,0 +1,6 @@
+# 在你的电脑上执行
+ssh -f -N \
+  -o ServerAliveInterval=15 \
+  -o ServerAliveCountMax=4 \
+  -R 0.0.0.0:3210:127.0.0.1:3210 \
+  user@你的服务器IP
