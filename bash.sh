@@ -24,3 +24,9 @@ nix build
 
 # Update dependencies
 nix flake update
+git clone https://github.com/auraecosystem/clawapp.git
+cd clawapp
+echo 'PROXY_TOKEN=your-token' > .env
+echo 'OPENCLAW_GATEWAY_TOKEN=your-gw-token' >> .env
+# Or use password auth: echo 'OPENCLAW_GATEWAY_PASSWORD=your-gw-password' >> .env
+docker compose up -d --build
